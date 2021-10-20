@@ -1,8 +1,6 @@
 package ru.unidubna.javaweb2.controllers;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.unidubna.javaweb2.model.User;
 import ru.unidubna.javaweb2.model.UserService;
 
@@ -16,19 +14,19 @@ import java.io.IOException;
 public class AddController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public /*String*/void addControllerGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("jsp/add");
-        requestDispatcher.forward(req, resp);
-//        return "jsp/add";
+    public String addControllerGet(/*HttpServletRequest req, HttpServletResponse resp*/) /*throws ServletException, IOException*/ {
+        /*RequestDispatcher requestDispatcher = req.getRequestDispatcher("jsp/add");
+        requestDispatcher.forward(req, resp);*/
+        return "jsp/add";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public /*String*/ void addControllerPost(HttpServletRequest req){
+    public String addControllerPost(HttpServletRequest req){
         String name = req.getParameter("name");
         int age = Integer.parseInt(req.getParameter("age"));
         User user = new User(name, age);
         UserService userService = new UserService();
         userService.saveUser(user);
-//        return "jsp/add";
+        return "jsp/add";
     }
 }
