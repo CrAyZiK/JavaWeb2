@@ -2,6 +2,8 @@ package ru.unidubna.javaweb2.model;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import ru.unidubna.javaweb2.entity.Auto;
+import ru.unidubna.javaweb2.entity.User;
 import ru.unidubna.javaweb2.utils.HibernateSessionFactoryUtil;
 
 import java.util.List;

@@ -1,24 +1,18 @@
 package ru.unidubna.javaweb2.controllers;
 
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.unidubna.javaweb2.model.User;
+import ru.unidubna.javaweb2.entity.User;
 import ru.unidubna.javaweb2.model.UserService;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 
-@RestController
+@Controller
 public class AddController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addControllerGet(/*HttpServletRequest req, HttpServletResponse resp*/) /*throws ServletException, IOException*/ {
-        /*RequestDispatcher requestDispatcher = req.getRequestDispatcher("jsp/add");
-        requestDispatcher.forward(req, resp);*/
-        return "jsp/add";
-    }
+    public String addControllerGet()  { return "jsp/add"; }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addControllerPost(HttpServletRequest req){

@@ -1,4 +1,6 @@
-package ru.unidubna.javaweb2.model;
+package ru.unidubna.javaweb2.entity;
+
+import ru.unidubna.javaweb2.entity.Auto;
 
 import javax.persistence.*;
 import java.util.ArrayList;

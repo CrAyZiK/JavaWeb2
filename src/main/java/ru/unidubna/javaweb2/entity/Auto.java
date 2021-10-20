@@ -1,4 +1,4 @@
-package ru.unidubna.javaweb2.model;
+package ru.unidubna.javaweb2.entity;
 
 import javax.persistence.*;
 

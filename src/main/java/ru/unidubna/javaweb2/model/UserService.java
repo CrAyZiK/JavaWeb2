@@ -1,5 +1,8 @@
 package ru.unidubna.javaweb2.model;
 
+import ru.unidubna.javaweb2.entity.Auto;
+import ru.unidubna.javaweb2.entity.User;
+
 import java.util.List;
 
 public class UserService {

@@ -5,8 +5,8 @@ package ru.unidubna.javaweb2.utils;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-import ru.unidubna.javaweb2.model.Auto;
-import ru.unidubna.javaweb2.model.User;
+import ru.unidubna.javaweb2.entity.Auto;
+import ru.unidubna.javaweb2.entity.User;
 
 public class HibernateSessionFactoryUtil {
     private static SessionFactory sessionFactory;
