@@ -17,13 +17,13 @@ import java.util.stream.Collectors;
 @Controller
 public class ListController {
     @RequestMapping(value = "/list", method = RequestMethod.GET)
-    public void listController(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public /*String*/ void listController(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         UserService userService = new UserService();
         List<User> users = userService.findAllUsers();
         List<String> names =  users.stream().map(User::getName).collect(Collectors.toList());
         req.setAttribute("userNames", names);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("jsp/list");
         requestDispatcher.forward(req, resp);
-        /*return "forward:jsp/list";*/
+//        return "forward:jsp/list";
     }
 }

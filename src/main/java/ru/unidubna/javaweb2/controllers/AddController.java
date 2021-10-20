@@ -16,19 +16,19 @@ import java.io.IOException;
 public class AddController {
 
     @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public void addControllerGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public /*String*/void addControllerGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("jsp/add");
         requestDispatcher.forward(req, resp);
-        /*return "jsp/add";*/
+//        return "jsp/add";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addControllerPost(HttpServletRequest req){
+    public /*String*/ void addControllerPost(HttpServletRequest req){
         String name = req.getParameter("name");
         int age = Integer.parseInt(req.getParameter("age"));
         User user = new User(name, age);
         UserService userService = new UserService();
         userService.saveUser(user);
-        return "jsp/add";
+//        return "jsp/add";
     }
 }
